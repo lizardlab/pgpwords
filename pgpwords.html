@@ -28,6 +28,9 @@ function convertToWordlist(){
         for(var j = 0; j < 4; j++){
             var wordCell = newRow.insertCell();
             var wordText = document.createTextNode(wordCard[i+j]);
+            if(16 <= i+j){
+                wordCell.style.fontWeight = "bold";
+            }
             wordCell.appendChild(wordText);
         }
     }
